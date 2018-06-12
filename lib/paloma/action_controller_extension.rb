@@ -11,8 +11,8 @@ module Paloma
       base.module_eval do
         prepend_view_path "#{Paloma.root}/app/views/"
 
-        before_filter :track_paloma_request
-        after_filter :append_paloma_hook, :if => :not_redirect?
+        before_action :track_paloma_request
+        after_action :append_paloma_hook, :if => :not_redirect?
       end
     end
 
@@ -33,7 +33,7 @@ module Paloma
         scope[:only] = options[:only] if options[:only]
         scope[:except] = options[:except] if options[:except]
 
-        self.before_filter(
+        self.before_action(
           Proc.new {
             self.js path_or_options, options[:params]
           },

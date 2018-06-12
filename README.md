@@ -238,7 +238,7 @@ class UsersController < ApplicationController
 end
 ```
 
-Like `before_filter` you can also pass `only` and `except` options.
+Like `before_action` you can also pass `only` and `except` options.
 
 
 ```ruby
