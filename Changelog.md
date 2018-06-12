@@ -1,3 +1,6 @@
+## 4.1.3
+* Compatibility Fix: no more before_filter and after_filter
+
 ## 4.1.2
 * https://github.com/kbparagua/paloma/issues/73 - Fix `js false` issue.
 
